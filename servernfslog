@@ -1,0 +1,15 @@
+Script started on 2022-08-22 02:22:37+00:00
+]0;vagrant@localhost:~[vagrant@localhost ~]$ cat /etc/exports
+/var/nfs_share/ *(rw)
+
+]0;vagrant@localhost:~[vagrant@localhost ~]$ e[Kshowmount -e 192.168.56.107
+Export list for 192.168.56.107:
+/var/nfs_share *
+]0;vagrant@localhost:~[vagrant@localhost ~]$ car[Kt /b[Kva[K[K[K[K[K[K[Kls /va[K[K[K[K[K[Kcat [K[K[K[Kls /var/nfs_share/
+teslog
+]0;vagrant@localhost:~[vagrant@localhost ~]$ cat /var/nfs_share/y[Kteslog 
+testnfs123
+]0;vagrant@localhost:~[vagrant@localhost ~]$ exit
+exit
+
+Script done on 2022-08-22 02:23:43+00:00

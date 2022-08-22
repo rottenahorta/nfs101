@@ -1,0 +1,32 @@
+Script started on 2022-08-22 02:26:04+00:00
+]0;vagrant@localhost:~[vagrant@localhost ~]$ showmount -r [K[Ke 192.168.56.41
+^C^C
+]0;vagrant@localhost:~[vagrant@localhost ~]$ showmount -e 192.168.56.41[K[K107
+Export list for 192.168.56.107:
+/var/nfs_share *
+]0;vagrant@localhost:~[vagrant@localhost ~]$ ls /mnt/nfs_share
+teslog
+]0;vagrant@localhost:~[vagrant@localhost ~]$ ls /mnt/nfs_share[1P[1P /mnt/nfs_sharec /mnt/nfs_sharea /mnt/nfs_sharet /mnt/nfs_share[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [K/teslog 
+testnfs123
+]0;vagrant@localhost:~[vagrant@localhost ~]$ cat /etc/fstab
+
+#
+# /etc/fstab
+# Created by anaconda on Thu Jun  3 05:04:05 2021
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=06c92b59-a126-4c60-8962-70d085e15a5b /                       xfs     defaults        0 0
+/swapfile none swap defaults 0 0
+192.168.56.107:/var/nfs_share /mnt/nfs_share nfs4 defaults 0 0
+]0;vagrant@localhost:~[vagrant@localhost ~]$ findmnt -t nfs4
+TARGET         SOURCE                        FSTYPE OPTIONS
+/mnt/nfs_share 192.168.56.107:/var/nfs_share nfs4   rw,relatime,vers=4.2,rsize=
+]0;vagrant@localhost:~[vagrant@localhost ~]$ exit
+exit
+
+Script done on 2022-08-22 02:27:33+00:00
